@@ -12,9 +12,6 @@ html {
   @media screen and (max-width: 1680px) {
     html {
       font-size: 14px; } }
-  @media screen and (max-width: 770px) {
-    html {
-      font-size: 12px; } }
 
 p {
   margin: 0; }
