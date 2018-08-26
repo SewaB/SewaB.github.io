@@ -15,6 +15,9 @@ html {
   @media screen and (max-width: 1366px) {
     html {
       font-size: 14px; } }
+  @media screen and (max-width: 1200px) {
+    html {
+      font-size: 12px; } }
 
 p {
   margin: 0; }
@@ -126,11 +129,13 @@ input, button {
           position: relative;
           background-color: #313131;
           border: none;
-          padding: 10px 15px;
+          padding: 0 15px;
           margin-bottom: 15px;
           cursor: pointer;
           border-radius: 3px;
-          height: 4.25rem; }
+          height: 4.5rem;
+          -webkit-box-sizing: border-box;
+          box-sizing: border-box; }
           .container .main-block .main-block-1 .right-side .button p {
             color: #fff;
             font-size: 1.2rem;
@@ -166,7 +171,7 @@ input, button {
           padding: 10px 15px;
           margin-bottom: 15px;
           border-radius: 3px;
-          height: 4.25rem; }
+          height: 4.5rem; }
           .container .main-block .main-block-1 .right-side .info-block p {
             color: #e5e5e5;
             font-size: 0.9rem;
@@ -187,6 +192,7 @@ input, button {
     -ms-flex-align: center;
     align-items: center;
     position: fixed;
+    left: 0px;
     bottom: 0px;
     background-color: #313131;
     height: 50px; }
