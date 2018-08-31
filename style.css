@@ -31,11 +31,21 @@ input, button {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  padding-bottom: 2.5rem; }
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  /*padding-bottom: rem(50);*/
+  min-height: 100vh; }
   .container .main-block {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
     display: -webkit-box;
@@ -161,15 +171,15 @@ input, button {
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
-    position: fixed;
-    left: 0px;
-    bottom: 0px;
+    /*position: fixed;
+		left: 0px;
+		bottom: 0px;*/
     background-color: #313131;
     height: 2.5rem; }
     .container .footer .footer-text {
       cursor: pointer;
       color: #848485;
-      font-size: 0.9rem;
+      font-size: 1.1rem;
       padding: 0 10px;
       border-right: 1px solid #848485; }
       .container .footer .footer-text:last-child {
@@ -218,6 +228,8 @@ input, button {
     .two-column-layout .two-column-layout-column-1 .options-list p {
       color: #fff;
       font-size: 1.2rem; }
+  .two-column-layout .two-column-layout-column-1 .options-list_active p {
+    color: #67c32e; }
 
 .two-column-layout .two-column-layout-column-2 {
   width: 70%; }
@@ -289,7 +301,7 @@ input, button {
   .two-column-layout .two-column-layout-column-2 .text-block {
     padding: 0px 15px 15px; }
     .two-column-layout .two-column-layout-column-2 .text-block p {
-      font-size: 0.9rem;
+      font-size: 0.8rem;
       color: #e5e5e5; }
     .two-column-layout .two-column-layout-column-2 .text-block .bold-text {
       font-weight: 700; }
@@ -305,15 +317,15 @@ input, button {
       padding: 15px 0 15px 1.5rem; }
     .two-column-layout .two-column-layout-column-2 .text-block .text-block_note {
       margin: 15px 0; }
-    .two-column-layout .two-column-layout-column-2 .text-block .link-text {
-      color: #3c91e6;
-      cursor: pointer; }
-      .two-column-layout .two-column-layout-column-2 .text-block .link-text:hover {
-        text-decoration: underline; }
     .two-column-layout .two-column-layout-column-2 .text-block .text-block_list {
       padding-left: 20px; }
       .two-column-layout .two-column-layout-column-2 .text-block .text-block_list li {
         color: #e5e5e5; }
+  .two-column-layout .two-column-layout-column-2 .link-text {
+    color: #3c91e6;
+    cursor: pointer; }
+    .two-column-layout .two-column-layout-column-2 .link-text:hover {
+      text-decoration: underline; }
   .two-column-layout .two-column-layout-column-2 .comment-block {
     margin-bottom: 15px;
     border: 2px solid #313131;
@@ -325,6 +337,38 @@ input, button {
     padding: 15px;
     border-radius: 3px;
     background-color: #3c91e6; }
+  .two-column-layout .two-column-layout-column-2 .versions-note {
+    margin-top: 30px;
+    padding: 25px 15px;
+    margin-bottom: 30px; }
+  .two-column-layout .two-column-layout-column-2 .two-column-layout-column-2_title {
+    color: #e5e5e5;
+    font-size: 1.6rem;
+    font-weight: 700;
+    line-height: 1;
+    padding-bottom: 30px;
+    margin: 0 15px;
+    border-bottom: 2px solid #313131; }
+  .two-column-layout .two-column-layout-column-2 .verison-row {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    border-bottom: 2px solid #313131;
+    padding: 15px 0px;
+    margin: 0 15px; }
+    .two-column-layout .two-column-layout-column-2 .verison-row .verison-row_name {
+      color: #e5e5e5;
+      font-size: 0.9rem;
+      font-weight: 700; }
+      .two-column-layout .two-column-layout-column-2 .verison-row .verison-row_name span {
+        font-size: 0.6rem; }
+    .two-column-layout .two-column-layout-column-2 .verison-row .verison-row_details {
+      color: #3c91e6;
+      font-size: 0.9rem;
+      cursor: pointer; }
 
 .button {
   display: -webkit-box;
