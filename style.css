@@ -225,10 +225,11 @@ input, button {
     padding: 0 15px;
     height: 1.75rem;
     margin-bottom: 15px; }
-    .two-column-layout .two-column-layout-column-1 .options-list p {
+    .two-column-layout .two-column-layout-column-1 .options-list a {
       color: #fff;
-      font-size: 1.2rem; }
-  .two-column-layout .two-column-layout-column-1 .options-list_active p {
+      font-size: 1.2rem;
+      text-decoration: none; }
+  .two-column-layout .two-column-layout-column-1 .options-list_active a {
     color: #67c32e; }
 
 .two-column-layout .two-column-layout-column-2 {
@@ -393,7 +394,8 @@ input, button {
   border-radius: 3px;
   height: 4.5rem;
   -webkit-box-sizing: border-box;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  text-decoration: none; }
   .button p {
     color: #fff;
     font-size: 1.2rem;
