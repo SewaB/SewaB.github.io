@@ -1,0 +1,706 @@
+<!DOCTYPE html>
+
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Komodo</title>
+		<link rel="stylesheet" href="css/style.min.css">
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,500,600,700,800" rel="stylesheet">
+	</head>
+	<body>
+		<div class='container two-column-layout'>
+			<main class='main-block'>
+				<div class='header'>
+					<img src="./img/smallKomodoImg.svg" alt="" />
+					<p>My Account</p>
+				</div>
+				<div class="middle-block">
+
+					<div class="two-column-layout-column-1">
+						<a class="button" href="komodo12.html">
+							<div>
+								<p class='button-text'>Komodo 12.1</p>
+								<p>Current</p>
+							</div>
+							<img src="./img/rightIcon.svg" alt="" />
+						</a>
+						<a class="button" href="komodo10.html">
+							<div>
+								<p class='button-text'>Komodo 10</p>
+								<p>Sale</p>
+							</div>
+							<img src="./img/rightIcon.svg" alt="" />
+						</a>
+						<a class="button">
+							<div>
+								<p class='button-text'>Komodo 9</p>
+								<p>Free</p>
+							</div>
+							<img src="./img/rightIcon.svg" alt="" />
+						</a>
+						
+						<div class="options-list">
+							<a href="all-versions.html">All versions</a>
+						</div>
+						<div class="options-list options-list_active">
+							<a href="settings.html">Komodo Settings</a>
+						</div>
+						<div class="options-list">
+							<a href="about-komodo.html">About Komodo</a>
+						</div>
+						<div class="options-list">
+							<a href="komodo-vs-humans.html">Komodo vs. humans</a>
+						</div>
+					</div>
+
+					<div class="two-column-layout-column-2">
+						<div class="text-block">
+							<p class="text-block_title">
+								README.txt
+							</p>
+						</div>
+
+						<div class="text-block">
+							<p class="text-block_title">
+								Komodo 11.01 for Windows, Linux and OSX
+							</p>
+							<p class="text-block_title">
+								© 2017 Mark Lefler and Larry Kaufman
+							</p>
+						</div>
+
+						<div class="text-block">
+							<p>
+								These instructions explain the settings and usage for the Komodo 11.01 chess engine. This is an improvement of the version of Komodo that won the World Computer Chess Championship (WCCC), the World Computer Software Championship, and the World Rapid Chess Championship, all in 2016. Komodo also beat a grandmaster by 3 to 1 despite giving him a two pawn handicap.
+							</p>
+						</div>
+
+						<div class="text-block note-block">
+							<p>
+								<span class="bold-text">Note:</span> the most important settings for best strength are Threads and Hash described below.
+							</p>
+						</div>
+						<div class="text-block note-block">
+							<p>
+								<span class="bold-text">Note:</span> Komodo is a chess engine. It can be used in any chess GUI that uses UCI (Universal Chess Interface) chess engines. You will find instructions for installing it in the HOW TO RUN  section below.
+							</p>
+						</div>
+
+						<div class="text-block">
+							<p class="text-block_subtitle">
+								Komodo 11.01 is an improvement over all previous Komodo versions.
+							</p>
+							<p>
+								Komodo supports multi-core computers and endgame tablebases. Komodo has won many highly respected engine tournaments such as TCEC, CCT, and the World championship, the World Blitz and the World Rapid championships. After more than 33,600 games, Komodo 11.01 is about 10 elo stronger than Komodo 10.4, our last release, based on our own single-thread testing at two minutes plus one second increment. Komodo 11.01 is roughly 55 Elo stronger than Komodo 10 on one or four cores; this is based on an average gain of 45 Elo points on six major rating lists (using longest time control with relevant data) for version 10.4 over 10.0 plus the estimated ten additional elo points for Komodo 11.01. On four threads 11.01 leads 10.4 by ten elo after 3000 games at one minute plus half second, so 11.01 should also be about 55 elo stronger than Komodo 10 on four threads or more.
+							</p>
+						</div>
+
+						<div class="text-block">
+							<p>
+								Komodo 11.01 is an improved version of the program that defeated World Champion Candidate and U.S. Champion Hikaru Nakamura by 2.5 to 1.5 despite giving him rook for knight, f2 pawn, f7 pawn, and four move handicaps. There are four important new features since Komodo 10, “Progress Threshold”, “Null Scale”, “Smart Syzygy”, and “Variety”, all described below.     
+							</p>
+						</div>
+
+						<div class="text-block">
+							<p class="text-block_subtitle">
+								Key features of Komodo 11.01:
+							</p>
+							<ul class="text-block_list">
+								<li>
+									Evaluation developed by a Grandmaster
+								</li>
+								<li>
+									Multi-core support (up to 64 cores)
+								</li>
+								<li>
+									Syzygy endgame tablebase support
+								</li>
+							</ul>
+						</div>
+
+						<div class="text-block">
+							<p class="text-block_subtitle">
+								What's new in Komodo 11.01 since Komodo 10.4:
+							</p>
+							<ul class="text-block_list">
+								<li>
+									Several new eval terms
+								</li>
+								<li>
+									Revised King safety
+								</li>
+								<li>
+									Speedups
+								</li>
+								<li>
+									Revised MP search
+								</li>
+								<li>
+									Fixed some minor search bugs which were discovered right after finalizing Komodo 11. They only cost an Elo point or two and were invisible to the user, but we decided not to release it without fixing them first, and also included a small speedup and a revision to King Safety to make 11.01, which is about five elo stronger than the original Komodo 11.
+								</li>
+							</ul>
+						</div>
+
+						<div class="text-block">
+							<p class="text-block_subtitle">
+								If you have Windows
+							</p>
+							<p>
+								The executables for Windows are in the /Windows subdirectory in the zip file you received. The zip file will be in this format:
+							</p>
+							<div class="release-info-block">
+								<p>
+									komodo-11.01-xxxxxx.zip
+								</p>
+							</div>
+						</div>
+
+						<div class="text-block">
+							<p>
+								Where the xxxxxx part will vary. Inside the zip file’s /Windows subdirectory you  will find two versions:
+							</p>
+							<div class="release-info-block">
+								<p>
+									komodo-11.01-64bit.exe
+								</p>
+							</div>
+							<div class="release-info-block">
+								<p>
+									komodo-11.01-32bit.exe
+								</p>
+							</div>
+						</div>
+
+						<div class="text-block">
+							<p>
+								We recommend using the 64-bit version as long as your hardware and version of Windows supports it. The 32 bit version will be much slower than the 64 bit version. Please copy the files from the zip file to a directory on your local hard drive.  We recommend making one directory to keep all your komodo files in one place (such as c:engines), so they are easier to find and add to your chess programs. Komodo automatically detects if the special popcount instructions are supported by your CPU and uses then if available to speed it up.
+							</p>
+						</div>
+						<div class="text-block note-block">
+							<p>
+								<span class="bold-text">Note:</span> Some antivirus programs may prevent extracting executable files from zip files. You may need to make an exception for the komodo zip files.
+							</p>
+						</div>
+
+						<div class="text-block">
+							<p>
+								After downloading you will find instructions of how to install Komodo in popular GUIs in the section below HOW TO RUN.
+							</p>
+						</div>
+
+						<div class="text-block">
+							<p class="text-block_subtitle">
+								If you have Linux
+							</p>
+							<p>
+								The binary for Linux is in the /Linux subdirectory in the zip file you received:
+							</p>
+							<div class="release-info-block">
+								<p>
+									komodo-11.01-linux
+								</p>
+							</div>
+							<p>
+								This version is optimized for recent (2015) machines but should still run on older machines that support 64 bits.
+							</p>
+						</div>
+
+						<div class="text-block">
+							<p>
+								The program must have execute permissions to run. You can set permissions with this command in a terminal window:
+							</p>
+							<div class="release-info-block">
+								<p>
+									$ chmod +x komodo-11.01-linux
+								</p>
+							</div>
+						</div>
+
+						<div class="text-block">
+							<p class="text-block_subtitle">
+								If you have Mac OS X
+							</p>
+							<p>
+								The binary for Mac OS X is in the /OSX subdirectory in the zip file your received. Please copy this from the zip file to a suitable directory on your computer.
+							</p>
+							<div class="release-info-block">
+								<p>
+									komodo-11.01-64-osx
+								</p>
+							</div>
+						</div>
+
+						<div class="text-block">
+							<p>
+								The file must have execute permissions to run. If you have trouble getting your chess GUI to load Komodo, run this command (run from the same directory as the Komodo OS X executable):
+							</p>
+							<div class="release-info-block">
+								<p>
+									$ chmod +x komodo-11.01-64-osx
+								</p>
+							</div>
+						</div>
+
+						<div class="text-block">
+							<p class="text-block_subtitle">
+								Some suggested free GUIs for OSX are:
+							</p>
+							<p>
+								ChessX: <span class="link-text">http://chessx.sourceforge.net/node/3</span>  
+							</p>
+						</div>
+						<div class="text-block">
+							<p>
+								Scid vs Mac: <span class="link-text">http://www.macupdate.com/app/mac/47867/scid-vs.-mac</span> 
+							</p>
+						</div>
+						<div class="text-block">
+							<p>
+								And a good commercial GUI is HIARCS Chess Explorer: <span class="link-text">http://www.hiarcs.com/mac-chess-explorer.html</span>   
+							</p>
+						</div>
+
+						<div class="text-block">
+							<p class="text-block_subtitle">
+								Android Versions
+							</p>
+							<p>
+								Due to huge variations in hardware and OS versions, an Android version is not included in the package, but can be bought via this link to the Google Play Store for Komodo 11:
+							</p>
+							<div class="release-info-block">
+								<p>
+									<span class="link-text">https://play.google.com/store/apps/details?id=com.komodochess.komodo11</span>
+								</p>
+							</div>
+							<p>
+								The Google Play Store automatically detects and installs the appropriate version for your hardware and Android version. Due to licensing, the Android version must be installed by Google Play Store, then you must open the App once to register it.
+							</p>
+						</div>
+
+						<div class="text-block">
+							<p class="text-block_title">
+								HOW TO RUN
+							</p>
+						</div>
+
+						<div class="text-block">
+							<p>
+								Komodo is a chess engine. It calculates moves but does not include a ‘chessboard’. The Komodo web site recommends a few 'chessboard' programs (aka GUI) which can be used with Komodo, some of them are open source and of very high quality.  You will find instructions for installing Komodo in many of the most popular GUIs in Windows here:
+							</p>
+							<div class="release-info-block">
+								<p>
+									<span class="link-text">
+										http://komodochess.com/installation.html
+									</span>
+								</p>
+							</div>
+							<p>
+								If you do not already own a good UCI-compliant GUI (such as Fritz, Chessbase, Hiarcs Chess Explorer or the Shredder GUI), a good free one for Windows is Arena ( <span class="link-text">playwitharena.com</span> ), version 3.0.
+							</p>
+						</div>
+
+						<div class="text-block note-block">
+							<p>
+								<span class="bold-text">Important:</span> For best play it is very important to set the Threads value to match your system.   Komodo's settings can be changed from the GUI. We will explain the non-standard settings below. See setHash.txt for additional information on setting the hash size based on your specific machine and time control.
+							</p>
+						</div>
+						<div class="text-block">
+							<p>
+								The most important settings to adjust for your computer are Threads and Hash. They are described below.
+							</p>
+						</div>
+
+						<div class="text-block">
+							<p class="text-block_subtitle">
+								Hash
+							</p>
+							<p>
+								This defines the maximum amount of memory to use for the transposition table - a major factor in the performance of modern chess programs. The default is set to 128 (in megabytes) which is probably enough for rapid use but should be set higher for longer think times or four or more cores. It is usually safe, but may not be optimum, to use half of your available memory for Hash, but smaller Hash size will improve performance slightly in fast play.  See the document setHASH.txt for more specific information on how this should be set for ultimate performance.  All 64 bit versions allow up to 65536 megabytes (64 GB) to be allocated, assuming your system has that much. The Windows 32 bit version limits this to 2048 megabytes due to hardware and operating system limitations. Please note Komodo’s hash entry size is a bit different from other programs. If you allocate 16 megabytes, Komodo will only use 12, and not use any more until you set it to 24, and so on with each doubling. This is normal. Our scheme has the advantage that on a computer with memory equal to a power of 2 GB, such as 8 or 16 or 32 GB, you can generally use ¾ of the memory for Hash instead of just half, while still leaving enough for the operating system and other things.  
+							</p>
+						</div>
+
+						<div class="text-block">
+							<p class="text-block_subtitle">
+								Threads
+							</p>
+							<p>
+								For best performance it is very important to correctly set the Threads value. The default is 1. You should set Threads to the number of "real" cores on your machine. Consult your computer manufacturer to determine how many cpu cores your machine has (not to be confused with the number of cpu threads your machine has). We recommend running Komodo with Hyperthreading turned off on your computer, although this is debatable and may depend on your hardware. You can often find this in one of the boot up BIOS settings.
+							</p>
+						</div>
+
+						<div class="text-block">
+							<p>
+								If you do run with Hyperthreading on (the default on most machines), there is some evidence that running with six threads may be optimum for a four core machine with eight threads. For example, on an i7 with hyperthreading, you typically have 4 "real" cores and 4 hyper-threaded or virtual cores. While the operating system may report 8 cores on this machine, there are only 4 cores and so you set Threads to 4 if Hyperthreading is off or to 6 if it is on. On systems with many cores (say 16 or more), there is probably no advantage to using more than the normal of “real” cores even with Hyperthreading off.  
+							</p>
+						</div>
+
+						<div class="text-block">
+							<p>
+								Note some GUIs, including ChessBase, change the default to the number of cores reported by the operating system, so you might need to change the default value in such cases.  If you find your computer to be sluggish or unresponsive when running Komodo, decrease the Threads value by 1. This will free up a thread for use by the operating system, GUI and other programs.
+							</p>
+						</div>
+
+						<div class="text-block">
+							<p class="text-block_subtitle">
+								Table Memory
+							</p>
+							<p>
+								This parameter determines how much memory, in megabytes, Komodo will allocate to various internal tables such as the pawn structure hash table, evaluation cache and others.  These are used by Komodo’s evaluation to prevent doing duplicate work. If you allocate too much or too little memory it can negatively impact your performance .  The default value of 128 is probably close to optimal for fast play on most machines cira 2013 but you may want to experiment with raising this value if you have a high performance machine. For slower games (or analysis) and/or for machines with many cores, higher values are appropriate. We have raised the upper limit in Komodo 9.2 and higher to 1024 megabytes since this may be appropriate for TCEC or similar use with many cores and long time limits. 
+							</p>
+						</div>
+						<div class="text-block">
+							<p>
+								We used 512 in our recent tournament victories. If you have a NUMA machine, you could experiment with making Table Memory 2 or 3 megs per core you use in your system. Limiting the Table Memory to the size of the cache for each CPU can allow faster access to the data since it would be locally cached instead of being in slower to access main memory.  Use a few minutes search and note the nodes per second you get as you try different Table Memory values, then use that setting.
+							</p>
+						</div>
+
+						<div class="text-block">
+							<p class="text-block_subtitle">
+								Use LMR
+							</p>
+							<p>
+								LMR (Late Move Reductions) is a search technique that is designed to aggressively reduce certain moves in the search tree, so greater depths can be obtained. However this can sometimes miss important moves.   LMR can be turned "on" or "off". In general Komodo will play much stronger with LMR turned "on", but one might want to experiment with turning it off to try a much shallower, but more thorough, search in some positions. With LMR "on" you can make further adjustments using the parameter Reduction described below.
+							</p>
+						</div>
+
+						<div class="text-block">
+							<p class="text-block_subtitle">
+								Null Move Pruning
+							</p>
+							<p>
+								Like LMR, this is also a technique to aggressively prune moves from the search tree.  Komodo plays much stronger with Null Move Pruning turned ON, but occasionally things can be missed, especially very deep threats and zugzwang positions.  This option allows you to experiment in the case that you have a difficult position which cannot be resolved and want to see if a much shallower, but more thorough, search would help.
+							</p>
+						</div>
+
+						<div class="text-block">
+							<p class="text-block_subtitle">
+								Null Scale
+							</p>
+							<p>
+								Null Scale lets you modify how aggressively Komodo reduces the depth when trying Null Move searches.  Higher values will reduce more, letting Komodo search deeper at the risk of missing some things. Lower values will make Komodo play more safely with less reduction in Null Move searches. Null Move Pruning must be on for Null Scale to have any effect. 
+							</p>
+						</div>
+						<div class="text-block">
+							<p>
+								We used 27 to win the World Championship but due to recent program changes we now prefer 28, which has tested as best so far and is now the default.
+							</p>
+						</div>
+
+						<div class="text-block">
+							<p class="text-block_subtitle">
+								Overhead ms
+							</p>
+							<p>
+								This is designed to compensate for slow user interfaces or slow internet connections, where a fraction of a second can be lost in the processing and transferring of information back and forth from the engine to the interface or interface to a chess server.  The value is in milliseconds (1/1000th of a second).  This should probably be left alone unless you see the program starting to forfeit games due to exhausting its time. If you see such time forfeits, increase this value. The default is 30. For internet play where lag is an issue a value of 60 is a good first try, but may have to go to 100 or even higher if you see time losses. For games with fairly long time control, 50 is a good value for general use just to be safe since the lost time will not be noticeable at these levels.
+							</p>
+						</div>
+
+						<div class="text-block">
+							<p class="text-block_subtitle">
+								Contempt (Komodo 9.2 and higher)
+							</p>
+							<p>
+								A positive Contempt is used by the computer’s evaluation to discourage (or encourage if negative) piece trades, blocked pawn structures, and repetition draws early in the game. The default value is 10 (in version 9.3 and higher) which should help against weaker opponents. Against near-equal opponents, set Contempt to 0 for best results. Against a human opponent, Contempt should be at least 25 even if he is the World Champion. Suggested values include 50 against grandmasters, 75 against masters, and 100 against strong amateurs. A good rule of thumb is to subtract the opponent's Elo rating from 3450 (estimated rating of Komodo 11 on a quadcore machine) and divide by 15. Higher Contempt values are especially appropriate when Komodo is giving a handicap. For handicap play, a good rule of thumb is to set Contempt for one third of the value of the initial position based on a one minute search in infinite analysis mode. 
+							</p>
+						</div>
+						<div class="text-block">
+							<p>
+								For example, if giving knight odds, if an initial one minute analysis search shows Komodo as down by 3.5 pawns, set Contempt to 117, which is 117 centipawns, or a third of the disadvantage. Contempt works with the next option “White Contempt”. In analysis mode, Komodo internally sets Contempt to zero unless “White Contempt” is turned on.
+							</p>
+						</div>
+
+						<div class="text-block">
+							<p class="text-block_subtitle">
+								White Contempt
+							</p>
+							<p>
+								A positive Contempt is used by the computer’s evaluation to discourage (or encourage if negative) piece trades, blocked pawn structures, and repetition draws early in the game. The default value is 10 (in version 9.3 and higher) which should help against weaker opponents. Against near-equal opponents, set Contempt to 0 for best results. Against a human opponent, Contempt should be at least 25 even if he is the World Champion. Suggested values include 50 against grandmasters, 75 against masters, and 100 against strong amateurs. A good rule of thumb is to subtract the opponent's Elo rating from 3450 (estimated rating of Komodo 11 on a quadcore machine) and divide by 15. Higher Contempt values are especially appropriate when Komodo is giving a handicap. For handicap play, a good rule of thumb is to set Contempt for one third of the value of the initial position based on a one minute search in infinite analysis mode. 
+							</p>
+						</div>
+						<div class="text-block">
+							<p>
+								For example, if giving knight odds, if an initial one minute analysis search shows Komodo as down by 3.5 pawns, set Contempt to 117, which is 117 centipawns, or a third of the disadvantage. Contempt works with the next option “White Contempt”. In analysis mode, Komodo internally sets Contempt to zero unless “White Contempt” is turned on.
+							</p>
+						</div>
+						<div class="text-block">
+							<p>
+								“White Contempt” also prevents Komodo from automatically setting Contempt to zero when running infinite analysis. This helps make anal ysis consistent when switching sides and exploring various lines and lets you include a non-zero Contempt in your analysis. Note when playing against the computer, if you wish to use a non-zero Contempt,  either turn off “White Contempt” so that Contempt will apply to the Computer’s side, or you can use the above description to set an appropriate Contempt for the specific side that Komodo is playing.  Please note if “White Contempt” is off, in infinite search or analysis mode, Komodo will always use a value of 0 for Contempt.
+							</p>
+						</div>
+						<div class="text-block">
+							<p>
+								Note that Contempt modifies the reported scores. On average a setting of 10 will increase the score for that side by ten centipawns (0.1 in most GUIs), more in the opening and less in the endgame. Contempt is turned off in Infinite analysis unless “White Contempt” (described below) is used.
+							</p>
+						</div>
+
+						<div class="text-block">
+							<p class="text-block_subtitle">
+								Time Usage
+							</p>
+							<p>
+								This provides the ability to manipulate Komodo's time control heuristics, to make it allocate time more quickly or less quickly.  The default is 0 which is what we believe is the ideal setting but remains to be tested at longer time controls.  You can make it play faster (use less time) by using a negative number or you can make it allocate time more aggressively by setting it to a positive value.  The range of values is between -9 and +9.  It's very unlikely extreme values will play well, so we suggest experimenting with relatively modest changes to the default. The ideal value may depend on the time limit.
+							</p>
+						</div>
+
+						<div class="text-block">
+							<p class="text-block_subtitle">
+								Tablebase (Syzygy) support
+							</p>
+							<p>
+								Komodo supports Ronald de Man's 'Syzygy' endgame tablebases. Endgame tablebases can be used to provide absolute knowledge about chess positions in which only a few pieces are left on the board (at the time of this writing, the Syzygy bases support up to 6-man positions, including the kings). Adding Syzygy to your computer and Komodo can increase the playing strength.
+							</p>
+						</div>
+						<div class="text-block">
+							<p>
+								The Syzygy tablebases are "Distance to Zero" (DTZ) tablebases. This means that they report, in addition to a definitive win/draw/loss (WDL) score, the distance to the zeroing of the 50-move draw clock. Unlike other endgame tablebases which report Distance to Mate (DTM), the Syzygy bases won't always report the fastest win from a particular endgame position, but you can be confident that the WDL score (and moves) provided by a tablebase probe are accurate.
+							</p>
+						</div>
+
+						<div class="text-block">
+							<p>
+								How to get the Syzygy tablebases: at the moment, the best way to get the required files is via the file-sharing service BitTorrent (on OSX, Transmission is a good client, on Windows and Linux, Vuze).  The necessary .torrent files can be found at http://oics.olympuschess.com/tracker/index.php. You should get at least the 3-4-5-man set (approx. 2 GB). The 6-man set is an additional approx. 138 GB large and will take a while to download. The 3-4-5-man set is also available for direct download from:
+							</p>
+							<div class="release-info-block">
+								<p>
+									<span class="link-text">http://chess.cygnitec.com/tablebases/syzygy/</span>
+								</p>
+							</div>
+						</div>
+						<div class="text-block">
+							<p>
+								Installing the Syzygy tablebases: create a folder on your computer's hard drive and place the fully-downloaded .rtbw (WDL files) and .rtbz (DTZ files) in it. If you have an SSD drive, we recommend that you place the WDL files in a folder on that drive, especially if you are using the 6-man bases.
+							</p>
+						</div>
+						<div class="text-block">
+							<p>
+								Understanding the Syzygy tablebase output: if the number of pieces on the board is less than or equal to the 'Syzygy Probe Limit' [see below] or the number of pieces supported by your installation of the Syzygy bases, whichever is less, Komodo will report a score which can be interpreted as a win, draw or loss.
+							</p>
+						</div>
+						<div class="text-block">
+							<p>
+								A score of +/- #1000 indicates a tablebase win or loss for a root tablebase position, that is, for a 6-man position with 6-man tablebases installed. For tablebase wins or losses which are determined during search, for instance for a 6-man position with 5-man tablebases installed, Komodo will return +/- 250.00 respectively. Komodo will attempt to resolve these scores to actual mate scores, although this may take a long time.
+							</p>
+						</div>
+						<div class="text-block">
+							<p>
+								Finally, a score of 0.00 or +/- 0.02 indicates a draw (+/- 0.02 is a draw which would be a win/loss if the 50-move rule were not in effect).
+							</p>
+						</div>
+						<div class="text-block">
+							<p>
+								Syzygy tablebase options: Komodo has a number of UCI options to control its use of the tablebases.
+							</p>
+						</div>
+						<div class="text-block">
+							<p>
+								Use Syzygy: when on (default), Komodo will try to use the Syzygy tablebases specified in the 'SyzygyPath' option (see below). When off, Komodo will not attempt to load the bases.
+							</p>
+						</div>
+						<div class="text-block">
+							<p>
+								SyzygyPath: this defines an absolute path on your computer to the tablebase files. On Windows, multiple paths can be separated with a semicolon (;) character. On OSX and Linux, multiple paths should be separated with the colon (:) character.
+							</p>
+						</div>
+						<div class="text-block">
+							<p>
+								For instance:
+							</p>
+						</div>
+						<div class="text-block">
+							<p>
+								on Windows
+							</p>
+							<div class="release-info-block">
+								<p>
+									"C:/Tablebases/Syzygy"
+								</p>
+							</div>
+							<div class="release-info-block">
+								<p>
+									"C:/Tablebases/Syzygy;D:/SyzygyWDL"
+								</p>
+							</div>
+						</div>
+						<div class="text-block">
+							<p>
+								on OSX and Linux
+							</p>
+							<div class="release-info-block">
+								<p>
+									"/home/me/syzygy"
+								</p>
+							</div>
+							<div class="release-info-block">
+								<p>
+									"/home/me/syzygy:/media/ssd/wdl"
+								</p>
+							</div>
+						</div>
+
+						<div class="text-block">
+							<p>
+								Syzygy Probe Depth: this determines the depth at which tablebases will be probed during search (note that the root position will always be probed.  If 'Use Syzygy' is enabled and the number of pieces on the board is less than or equal to the 'Syzygy Probe Limit' [see below] or the number of pieces supported by your installation of the Syzygy bases, whichever is less).  A higher number means that Komodo will wait longer to begin probing the tablebases for any particular search.  The default depth is 2 half-plies.
+							</p>
+						</div>
+						<div class="text-block">
+							<p>
+								Syzygy Probe Limit: this determines how many pieces need to be on the board before Komodo begins probing (even at the root).  By default, this is set to 6 (the current upper limit of the Syzygy tablebases). Of course, if you have only the 3-4-5-man set, Komodo will only begin probing the bases when a 5-man position arises. Note 6 piece use can take up both a lot of drive storage,and RAM during the search.
+							</p>
+						</div>
+						<div class="text-block">
+							<p>
+								Syzygy 50 Move Rule: when on (default), Komodo will respect the 50-move rule in its tablebase evaluation (a won position which requires more than 50 moves without a pawn move or capture to win will be scored as a draw).  When off, Komodo will ignore the 50-move rule in its evaluation (the same position would receive a winning score).
+							</p>
+						</div>
+						<div class="text-block">
+							<p>
+								Smart Syzygy: When this is checked/on, Komodo will always check Syzygy TBs for (Syzygy Probe Limit - 1) pieces and under at all depths in the main search. Otherwise, it will only consult Syzygy when the Probe Depth and Probe Limit conditions are met. This feature is designed to allow Syzygy access from slower hard drives
+							</p>
+						</div>
+						<div class="text-block">
+							<p>
+								For instance, set Syzygy Probe Limit to 6 (the default if you have the 6-man tablebase files), Probe Depth to 10 and enable Smart Syzygy. At search depth 10 and higher, Komodo will use Syzygy for 6-piece positions. At lower search depths, it will only consult Syzygy when there are 5 pieces or fewer on the board. You can adjust Probe Depth to see what gives you the best results. Note that the 5-piece Syzygy tablebases used during search take up about 0.5 GB, which the operating system will cache in memory. 6-piece tablebase access will generally cause slowdowns when using standard hard drives. Smart Syzygy has no effect at the starting position of a search (if 6 pieces are on the board, the 6-piece tablebases will be consulted if Probe Limit is 6).
+							</p>
+						</div>
+						
+						<div class="text-block">
+							<p class="text-block_subtitle">
+								Selectivity
+							</p>
+							<p>
+								You can adjust how aggressively Komodo prunes using the "Selectivity" parameter.  Higher values will encourage Komodo to prune more at low search depths, leading to a deeper overall search at an increasing risk of missing some moves.  The default in Komodo 11.01 is 73. A setting of 200 will set selectivity to the maximum.
+							</p>
+						</div>
+
+						<div class="text-block">
+							<p class="text-block_subtitle">
+								Reduction
+							</p>
+							<p>
+								This controls how deeply Komodo searches.  Higher "Reduction" values will cause Komodo to reduce parts of the tree more, increasing overall search depth but possibly missing some good lines.  The default is 0, meaning no adjustment to what we consider best. We are fairly confident that the best value on a single thread is close to zero, but we have not yet determined whether other values may be better on many threads, so feel free to experiment.
+							</p>
+						</div>
+
+						<div class="text-block">
+							<p class="text-block_subtitle">
+								King Safety
+							</p>
+							<p>
+								This controls how highly Komodo scores king safety.  The higher the value, the greater the effects of attacks on the king in Komodo's evaluation.  The default is 73 in Komodo 11.
+							</p>
+						</div>
+
+						<div class="text-block">
+							<p class="text-block_subtitle">
+								Persistent Hash
+							</p>
+							<p>
+								This is useful for long analysis.  It allows you to save the current Hash Table to your hard drive, then reload it later.  First, set a name for the file in the "Hash File Name" option. Most GUIs will require you to close the dialog box with an OK to “set” the name. You should then stop the search/analysis, return to the UCI parameters then, then click the "Save Hash to File" button.  To later reload the saved information, first make sure the "Hash File Name" is for the file you want, then click "Load Hash from File".  Once it loads, you may continue analysis.  You must make sure the current hash filename is the same as what was used when you saved the file.  Note that hash files can be very large and can take a lot of time to save and load, so make sure you have enough disk space to use them.
+							</p>
+						</div>
+
+						<div class="text-block">
+							<p class="text-block_subtitle">
+								Minimal Reporting
+							</p>
+							<p>
+								This feature allows you to reduce the data Komodo outputs for the first X ply of a search. The default value of 0 does not suppress any program output.  Value of 1 or more will suppress outputting the current move Komodo is searching. Higher numbers will suppress more output. For example, with a value of 8 Komodo will not print move sequences or scores for the first 8 ply. This can save on communication overhead with the GUI and is useful when Komodo is running over a network connection or is playing at fast time controls. The default value is 0, meaning all data is reported and nothing is suppressed.
+							</p>
+						</div>
+
+						<div class="text-block">
+							<p class="text-block_subtitle">
+								Dynamism
+							</p>
+							<p>
+								Introduced in Komodo 9.4, Dynamism lets you control how important Komodo thinks the dynamic part of the evaluation is. The default is 120.  Values under 120 reduce the dynamic evaluation, while values above 120 increase the dynamic evaluation.  Lower values will make Komodo play more conservatively, while with higher values it will play riskier moves. More static parts of the evaluation like material and pawn structure are not changed by Dynamism. Although the parameter can be set from 0 to 300, single-digit values will cause bizarre play. A value around 80 will in general produce more realistic evaluations than the default 120, although it will weaken play by 20 to 30 Elo points. The maximum Dynamism value was raised at the request of a Komodo user.
+							</p>
+						</div>
+
+						<div class="text-block">
+							<p class="text-block_subtitle">
+								Progress Threshold
+							</p>
+							<p>
+								Progress Threshold allows you to set the number of half moves played with no capture or pawn advance (per the 50 move rule) where Komodo starts pulling the evaluation score towards zero. In the World Computer Chess Championship this was internally set to 85, as were earlier versions of Komodo.  The lower this value the sooner Komodo will start to see that no progress is being made and encourage it to take another line. The old value of 85 was probably one or two elo stronger, and we used 85 to win the World Championship, but the current default of 30 makes Komodo a better analysis tool and shortens long games and was successfully used to win the World Rapid.
+							</p>
+						</div>
+
+						<div class="text-block">
+							<p class="text-block_subtitle">
+								Variety
+							</p>
+							<p>
+								Variety lets you have Komodo play different lines from its default. A value of zero turns off Variety. With the setting at zero, Komodo will always play the best move it can find. A number from 1-20 allows Komodo to find different moves in some positions. The higher the number, the greater the variety of moves will be. Higher values should lower elo, although we could not detect any elo loss (tiny gain actually) after many thousands of ultra-fast games with a setting of 5 or 10, and less than one elo loss with the maximum setting of 20, with a three elo error margin in each case. Perhaps it was a bit lucky; but it seems that the weakening is not more than one elo per five points set, probably less. Note that when still in Opening Book (described below), the book determines what moves will be played.
+							</p>
+						</div>
+						<div class="text-block note-block">
+							<p>
+								<span class="bold-text">Note:</span> Running Komodo on more than one thread automatically produces variety, even at the same depth, but the Variety option works even on one thread, and should increase variety on multi-threads.
+							</p>
+						</div>
+
+						<div class="text-block">
+							<p class="text-block_subtitle">
+								Opening Books
+							</p>
+							<p>
+								Komodo can use Polyglot opening books. When playing with a book, Komodo will move instantly if it finds a legal move leading to a position in the book. We have a free book with lots of variety on our site on this page:
+							</p>
+							<div class="release-info-block">
+								<p>
+									<span class="link-text">https://komodochess.com/downloads.html</span>
+								</p>
+							</div>
+							<p>
+								Just click the download link next to " Komodo Polyglot book" near the bottom of the page. You can find more Polyglot opening books on the internet
+							</p>
+						</div>
+
+						<div class="text-block">
+							<p>
+								Komodo’s default book name is komodo.bin, which is what the free book above is named. So after downloading it, open the ZIP file and copy the komodo.bin book to the same directory you put the your komodo executable in. Also, make sure the OwnBook UCI option is checked, and that "Book File" is also set to komodo.bin. The option “Best Book Line” when set will make Komodo always play the best scoring book move, or randomly select between two or more book moves with the same score. When off, it will tend to play the best scoring move more often, but still give the weaker moves some play for more variety.  Komodo 9.4 and up better handle opening books modified using the free scid program ( <span class="link-text">https://sourceforge.net/projects/scid/files/</span> ). Note many GUIs also have the ability to have opening books.  If they are in use, they have priority over Komodo’s book.
+							</p>
+						</div>
+
+						<div class="text-block">
+							<p class="text-block_title">
+								Credits
+							</p>
+						</div>
+						<div class="text-block">
+							<p class="text-block_subtitle">
+								Authors: Larry Kaufman, Don Dailey and Mark Lefler.
+							</p>
+						</div>
+						<div class="text-block">
+							<p>
+								We wish to thank Jeremy Bernstein for his fine work in adding Syzygy tablebase support to Komodo and for his work on the Mac and Android versions. We also wish to thank our webmaster Jesse Gersenson who makes us look good on the web, and who has organized a series of matches with Komodo giving handicaps to Grandmasters and operated Komodo in them.  Also another big thanks to all the people who have offered to test and run matches with Komodo.
+							</p>
+						</div>
+
+						<div class="text-block">
+							<p class="text-block_subtitle">
+								WARNING: Komodo Chess and this readme file are (C) 2017 by Mark Lefler and Larry Kaufman
+							</p>
+							<p class="text-block_subtitle">
+								FBI Warning
+							</p>
+							<p>
+								The unauthorized reproduction or distribution of a copyrighted work is illegal. Criminal copyright infringement, including infringement without monetary gain, is investigated by the FBI and is punishable by fines and federal imprisonment.
+							</p>
+						</div>
+
+					</div>
+				</div>
+				
+			</main>
+			<footer class='footer'>
+				<a class="footer-text" href="privacy.html">Privacy</a>
+				<a class="footer-text" href="faq.html">FAQ</a>
+				<a class="footer-text" href="help.html">Help</a>
+				<a class="footer-text">komodochess.com &#169; 2018</a>
+			</footer>
+		</div>
+	</body>
+</html>
