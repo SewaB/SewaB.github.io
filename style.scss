@@ -92,19 +92,6 @@ $font-base: 16px;
 					height: 100%;
 				}
 			}
-			.cart-block {
-				min-height: unset;
-				position: absolute;
-				top: 2px;
-				right: 0px;
-				padding: 0px;
-				margin:0px;
-				a {
-					font-size: rem(18);
-					font-weight: 500;
-					line-height: 1;
-				}
-			}
 		}
 		.middle-block {
 			box-sizing: border-box;
@@ -115,18 +102,18 @@ $font-base: 16px;
 			.main-title {
 				margin-top: 10px;
 				color: #67c32e;
-				font-size: rem(88);
+				font-size: rem(84);
 				font-weight: 700;
 				line-height: 1;
 			}
 			.main-subtitle {
 				color: #848485;
-				font-size: rem(68);
+				font-size: rem(64);
 				line-height: 1;
 			}
 			.title {
 				color: #e5e5e5;
-				font-size: rem(48);
+				font-size: rem(44);
 				line-height: 2;
 				font-weight: 700;
 			}
@@ -139,6 +126,10 @@ $font-base: 16px;
 				img {
 					width: 100%;
 				}
+			}
+			.komodo-startpage {
+				margin-bottom: 30px;
+				cursor: pointer;
 			}
 			.right-side {
 				display: flex;
@@ -258,7 +249,7 @@ $font-base: 16px;
 						font-weight: 700;
 					}
 					&:hover {
-						background-color: #67c32e; 
+						background-color: #848485; 
 					}
 				}
 			}
@@ -274,6 +265,9 @@ $font-base: 16px;
 					background-color: #67c32e;
 					p {
 						color: #fff;
+					}
+					&:hover {
+						background-color: #67e34e; 
 					}
 				}
 			}
@@ -438,7 +432,18 @@ $font-base: 16px;
 .options-list_active a {
 	color: #67c32e;
 }
-
+.cart-block {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
+	span {
+		font-size: rem(22);
+		color: #fff;
+	}
+	&:hover span {
+		color: #67c32e;
+	}
+}
 .button {
 	display: flex;
 	flex-direction: row;
@@ -470,11 +475,14 @@ $font-base: 16px;
 		margin-right: 10px;
 	}
 	&:hover {
-		background-color: #67c32e;
+		background-color: #848485;
 	}
 }
 .green-button {
 	background-color: #67c32e;
+	&:hover {
+		background-color: #67e34e;
+	}
 }
 
 .common-button_block {
@@ -668,6 +676,9 @@ $font-base: 16px;
 		}
 		.two-column-layout-column-2 {
 			width: 100%;
+			.buy-buttons {
+				justify-content: center;
+			}
 		}
 	}
 	.container {
@@ -675,10 +686,6 @@ $font-base: 16px;
 			padding: 0px 15px;
 			.header {
 				height: rem(70);
-				.cart-block {
-					position: unset;
-					font-size: rem(20);
-				}
 			}
 			.middle-block {
 			 	flex-direction: column;
@@ -696,6 +703,7 @@ $font-base: 16px;
 				}
 				.komodo-startpage {
 					text-align: center;
+					margin-bottom: unset;
 				}
 				.right-side {
 					margin-top: 15px;
@@ -720,6 +728,9 @@ $font-base: 16px;
 				}
 				.right-side {
 					margin-top: 50px;
+				}
+				.cart-block {
+					align-items: center;
 				}
 			}
 			.payment-methods-block {

@@ -97,17 +97,6 @@ input, button {
           height: 100%; }
         .container .main-block .header a img {
           height: 100%; }
-      .container .main-block .header .cart-block {
-        min-height: unset;
-        position: absolute;
-        top: 2px;
-        right: 0px;
-        padding: 0px;
-        margin: 0px; }
-        .container .main-block .header .cart-block a {
-          font-size: 0.9rem;
-          font-weight: 500;
-          line-height: 1; }
     .container .main-block .middle-block {
       -webkit-box-sizing: border-box;
       box-sizing: border-box;
@@ -124,16 +113,16 @@ input, button {
       .container .main-block .middle-block .main-title {
         margin-top: 10px;
         color: #67c32e;
-        font-size: 4.4rem;
+        font-size: 4.2rem;
         font-weight: 700;
         line-height: 1; }
       .container .main-block .middle-block .main-subtitle {
         color: #848485;
-        font-size: 3.4rem;
+        font-size: 3.2rem;
         line-height: 1; }
       .container .main-block .middle-block .title {
         color: #e5e5e5;
-        font-size: 2.4rem;
+        font-size: 2.2rem;
         line-height: 2;
         font-weight: 700; }
       .container .main-block .middle-block .subtitle {
@@ -143,6 +132,9 @@ input, button {
         width: 60%; }
         .container .main-block .middle-block .left-side img {
           width: 100%; }
+      .container .main-block .middle-block .komodo-startpage {
+        margin-bottom: 30px;
+        cursor: pointer; }
       .container .main-block .middle-block .right-side {
         display: -webkit-box;
         display: -ms-flexbox;
@@ -292,7 +284,7 @@ input, button {
           font-size: 1.8rem;
           font-weight: 700; }
         .two-column-layout .two-column-layout-column-2 .buy-buttons .buy-button .buy-button-buy:hover {
-          background-color: #67c32e; }
+          background-color: #848485; }
     .two-column-layout .two-column-layout-column-2 .buy-buttons .white-button {
       /*background-color: #67c32e;*/
       background-color: #fff;
@@ -304,6 +296,8 @@ input, button {
         background-color: #67c32e; }
         .two-column-layout .two-column-layout-column-2 .buy-buttons .white-button .buy-button-buy p {
           color: #fff; }
+        .two-column-layout .two-column-layout-column-2 .buy-buttons .white-button .buy-button-buy:hover {
+          background-color: #67e34e; }
   .two-column-layout .two-column-layout-column-2 .text-block {
     padding: 0px 15px 15px; }
     .two-column-layout .two-column-layout-column-2 .text-block p {
@@ -451,6 +445,23 @@ input, button {
 .options-list_active a {
   color: #67c32e; }
 
+.cart-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: end;
+  -ms-flex-align: end;
+  align-items: flex-end; }
+  .cart-block span {
+    font-size: 1.1rem;
+    color: #fff; }
+  .cart-block:hover span {
+    color: #67c32e; }
+
 .button {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -489,10 +500,12 @@ input, button {
     width: 1.25rem;
     margin-right: 10px; }
   .button:hover {
-    background-color: #67c32e; }
+    background-color: #848485; }
 
 .green-button {
   background-color: #67c32e; }
+  .green-button:hover {
+    background-color: #67e34e; }
 
 .common-button_block {
   display: -webkit-box;
@@ -693,13 +706,14 @@ input, button {
     margin-right: 0px; }
   .two-column-layout .two-column-layout-column-2 {
     width: 100%; }
+    .two-column-layout .two-column-layout-column-2 .buy-buttons {
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center; }
   .container .main-block {
     padding: 0px 15px; }
     .container .main-block .header {
       height: 3.5rem; }
-      .container .main-block .header .cart-block {
-        position: unset;
-        font-size: 1rem; }
     .container .main-block .middle-block {
       -webkit-box-orient: vertical;
       -webkit-box-direction: normal;
@@ -717,7 +731,8 @@ input, button {
         .container .main-block .middle-block .left-side .subtitle {
           font-size: 1rem; }
       .container .main-block .middle-block .komodo-startpage {
-        text-align: center; }
+        text-align: center;
+        margin-bottom: unset; }
       .container .main-block .middle-block .right-side {
         margin-top: 15px;
         width: 80%;
@@ -734,6 +749,10 @@ input, button {
       margin-left: 10.5rem; }
     .container .main-block .my-account .right-side {
       margin-top: 50px; }
+    .container .main-block .my-account .cart-block {
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center; }
     .container .main-block .payment-methods-block {
       margin-top: 2rem; }
       .container .main-block .payment-methods-block img {
