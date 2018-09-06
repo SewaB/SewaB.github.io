@@ -517,7 +517,7 @@ input, button {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center; }
-  .common-button_block .common-button_green {
+  .common-button_block .common-button {
     min-width: 5rem;
     height: 2.25rem;
     border: 2px solid #fff;
@@ -536,12 +536,17 @@ input, button {
     background-color: #313131;
     font-weight: 600;
     margin: 20px 30px; }
-    .common-button_block .common-button_green .common-button_green-text {
+    .common-button_block .common-button .common-button_text {
       color: #fff;
       font-size: 1rem; }
-  .common-button_block .common-button_green-active {
+    .common-button_block .common-button:hover {
+      background-color: #848485; }
+  .common-button_block .common-button_green {
     background-color: #67c32e;
     border-color: #67c32e; }
+    .common-button_block .common-button_green:hover {
+      background-color: #67e34e;
+      border-color: #67e34e; }
 
 .my-account .right-side {
   -webkit-box-align: end;

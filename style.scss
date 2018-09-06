@@ -489,7 +489,7 @@ $font-base: 16px;
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	.common-button_green {
+	.common-button {
 		min-width: rem(100);
 		height: rem(45);
 		border: 2px solid #fff;
@@ -502,14 +502,21 @@ $font-base: 16px;
 		background-color: #313131;
 		font-weight: 600;
 		margin: 20px 30px;
-		.common-button_green-text {
+		.common-button_text {
 			color: #fff;
 			font-size: rem(20);
 		}
+		&:hover {
+			background-color: #848485;
+		}
 	}
-	.common-button_green-active {
+	.common-button_green {
 		background-color: #67c32e;
 		border-color: #67c32e;
+		&:hover {
+			background-color: #67e34e;
+			border-color: #67e34e;
+		}
 	}
 }
 
