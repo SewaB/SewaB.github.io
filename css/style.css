@@ -251,8 +251,7 @@ input, button {
       height: calc(13.5rem + 30px);
       background-color: #313131;
       -webkit-box-sizing: border-box;
-      box-sizing: border-box;
-      padding: 0 1.5rem; }
+      box-sizing: border-box; }
       .two-column-layout .two-column-layout-column-2 .buy-buttons .buy-button p {
         color: #fff; }
       .two-column-layout .two-column-layout-column-2 .buy-buttons .buy-button .buy-button-name {
@@ -278,8 +277,10 @@ input, button {
         -ms-flex-align: center;
         align-items: center;
         height: 4.5rem;
-        width: 100%;
-        border-radius: 3px; }
+        width: calc(100% - 3rem);
+        border-radius: 3px;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box; }
         .two-column-layout .two-column-layout-column-2 .buy-buttons .buy-button .buy-button-buy p {
           font-size: 1.8rem;
           font-weight: 700; }
